@@ -15,7 +15,7 @@ export default defineConfig({
     screenshot: "on-first-failure",
     trace: "on-first-retry",
     baseURL: "https://opensource-demo.orangehrmlive.com/",
-    headless: false,
+    headless: process.env.CI ? true : false,
   },
 
   /* Configure projects for major browsers */
