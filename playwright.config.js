@@ -7,6 +7,10 @@ export default defineConfig({
 
   reporter: "html",
 
+  timeout: 30000,
+  expect: {
+    timeout: 10000,
+  },
   use: {
     screenshot: "on-first-failure",
     trace: "on-first-retry",

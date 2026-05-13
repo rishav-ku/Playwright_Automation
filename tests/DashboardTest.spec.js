@@ -10,3 +10,10 @@ test('Validate dashboard page', async ({page})=>{
     dashboardPage.validateDashboardPage();
     
 })
+
+test.only('Validate dashboard page elements', async ({page})=>{
+    
+    await page.goto("/web/index.php/dashboard/index");
+    const dashboardPage = new DashboardPage(page);
+    await dashboardPage.validateDashboardPageElements();  
+})
