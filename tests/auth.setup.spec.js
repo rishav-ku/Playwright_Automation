@@ -1,5 +1,5 @@
 import {test as setup,expect} from "@playwright/test"
-import logInData from "../TestData/logInData.json"
+import logInData from "../TestData/LogInData.json"
 import { LogInPage } from '../pages/LogInPage'
 
 setup("Authentication", async ({page})=>{
