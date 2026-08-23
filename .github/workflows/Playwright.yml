@@ -28,3 +28,10 @@ jobs:
 
       - name: Run Tests
         run: npx playwright test
+
+      -name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          psth: plsywright-report/
